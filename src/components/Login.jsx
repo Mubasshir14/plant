@@ -13,7 +13,7 @@ const Login = () => {
             .then((res) => {
                 const user = res.user;
                 console.log(user);
-                fetch('http://localhost:5000/user', {
+                fetch('https://plant-server-6tw1.onrender.com/user', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

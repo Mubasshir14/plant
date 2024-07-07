@@ -11,7 +11,7 @@ const BestSelling = () => {
 
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 p-5'>
-                <div className="w-full p-5  overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div className="w-full p-5  overflow-hidden bg-white rounded-lg shadow-lg ">
                     <img className="object-cover rounded-lg w-full h-56" src={img1} alt="avatar" />
 
                     {/* <div className="py-5 px-1 text-center">
@@ -19,7 +19,7 @@ const BestSelling = () => {
                         
                     </div> */}
                 </div>
-                <div className="w-full p-5  overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div className="w-full p-5  overflow-hidden bg-white rounded-lg shadow-lg ">
                     <img className="object-cover rounded-lg w-full h-56" src={img2} alt="avatar" />
 
                     {/* <div className="py-5 px-1 text-center">
@@ -27,7 +27,7 @@ const BestSelling = () => {
                         
                     </div> */}
                 </div>
-                <div className="w-full p-5  overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div className="w-full p-5  overflow-hidden bg-white rounded-lg shadow-lg ">
                     <img className="object-cover rounded-lg w-full h-56" src={img3} alt="avatar" />
 
                     {/* <div className="py-5 px-1 text-center">

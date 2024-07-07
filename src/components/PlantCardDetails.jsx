@@ -13,7 +13,7 @@ const PlantCardDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/plants/${id}`)
+        fetch(`https://plant-server-6tw1.onrender.com/plants/${id}`)
             .then(res => res.json())
             .then(data => setPlant(data))
             .catch(error => console.error('Error fetching data:', error));
@@ -52,7 +52,7 @@ const PlantCardDetails = () => {
                 
             };
 
-            fetch('http://localhost:5000/cart', {
+            fetch('https://plant-server-6tw1.onrender.com/cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -98,13 +98,13 @@ const PlantCardDetails = () => {
                             <ImageGallery items={images} />
                         </div>
                         <div className="w-full lg:w-1/2 mt-6 lg:mt-0 lg:pl-6">
-                            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+                            <h1 className="text-4xl font-bold text-gray-800  mb-4">
                                 {plant.name}
                             </h1>
-                            <p className="text-3xl text-gray-800 font-semibold mb-2">
+                            <p className="text-3xl text-[#343434] font-semibold mb-2">
                                 ${plant.price} <span className="text-red-500 line-through">${plant.original_price}</span>
                             </p>
-                            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                            <p className="text-lg text-gray-600 mb-6">
                                 {plant.short_description}
                             </p>
                             <div className="flex items-center mb-4">
@@ -117,7 +117,7 @@ const PlantCardDetails = () => {
                                     +
                                 </button>
                             </div>
-                            <div className="flex items-center mb-6">
+                            <div className="flex items-center mb-6 text-[#343434]">
                                 <span className="mr-4">Include Planter</span>
                                 <select className="px-4 py-2 border rounded">
                                     <option value="Yes">Yes</option>
@@ -131,8 +131,8 @@ const PlantCardDetails = () => {
                                 Add to Cart
                             </button>
                             <div className="mt-6">
-                                <h3 className="text-xl font-semibold">Delivery</h3>
-                                <p className="mb-2">Enter your Pincode to check delivery time.</p>
+                                <h3 className="text-xl font-semibold text-[#343434]">Delivery</h3>
+                                <p className="mb-2 text-[#343434]">Enter your Pincode to check delivery time.</p>
                                 <div className="flex items-center mb-4">
                                     <input
                                         type="text"

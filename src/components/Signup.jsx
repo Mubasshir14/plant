@@ -13,7 +13,7 @@ const Signup = () => {
             .then((res) => {
                 const user = res.user;
                 console.log(user);
-                fetch('http://localhost:5000/user', {
+                fetch('https://plant-server-6tw1.onrender.com/user', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ const Signup = () => {
                 const user = res.user;
                 updateUserProfile(name, photo)
                     .then(() => {
-                        fetch('http://localhost:5000/user', {
+                        fetch('https://plant-server-6tw1.onrender.com/user', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'

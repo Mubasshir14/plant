@@ -11,7 +11,7 @@ const CategoryTab = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/plants')
+        fetch('https://plant-server-6tw1.onrender.com/plants')
             .then(res => res.json())
             .then(data => {
                 setPlants(data);

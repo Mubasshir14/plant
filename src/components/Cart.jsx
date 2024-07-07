@@ -11,7 +11,7 @@ const Cart = () => {
         const fetchCartItems = async () => {
             try {
                 if (user) {
-                    const response = await fetch(`http://localhost:5000/cart/${user.uid}`);
+                    const response = await fetch(`https://plant-server-6tw1.onrender.com/cart/${user.uid}`);
                     if (!response.ok) {
                         throw new Error('Failed to fetch cart items');
                     }
@@ -29,7 +29,7 @@ const Cart = () => {
 
     const handleDeleteItem = async (itemId) => {
         try {
-            const response = await fetch(`http://localhost:5000/cart/${itemId}`, {
+            const response = await fetch(`https://plant-server-6tw1.onrender.com/cart/${itemId}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {

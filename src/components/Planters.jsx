@@ -6,7 +6,7 @@ const Planters = () => {
     const [i, setI] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/plants')
+        fetch('https://plant-server-6tw1.onrender.com/plants')
             .then(res => res.json())
             .then(data => {
                 setTree(data);

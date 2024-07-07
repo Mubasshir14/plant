@@ -7,7 +7,7 @@ const Plants = () => {
     const itemsPerPage = 8; // Number of items per page
 
     useEffect(() => {
-        fetch('http://localhost:5000/plants')
+        fetch('https://plant-server-6tw1.onrender.com/plants')
             .then(res => res.json())
             .then(data => {
                 setTree(data);
@@ -23,7 +23,7 @@ const Plants = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div className="md:my-16">
+        <div className="md:my-16 mb-4">
             <h1 className='text-[#343434] mb-4 font-bold text-center text-3xl'>Trending Plants</h1>
             <div className='bg-black h-[2px] w-[100px] mb-4 mx-auto'></div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5">
