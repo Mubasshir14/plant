@@ -16,6 +16,7 @@ import Signup from './components/Signup';
 import AuthProvider from './components/AuthProvider';
 import Cart from './components/Cart';
 import TopSelling from './components/TopSelling';
+import Planters from './components/Planters';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: '/hot',
         element: <TopSelling />
+      },
+      {
+        path: '/planters',
+        element: <Planters/>
       }
     ]
   },

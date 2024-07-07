@@ -3,6 +3,7 @@ import PlantCard from "./PlantCard";
 
 const Plants = () => {
     const [tree, setTree] = useState([]);
+    const [minor, setMinor] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8; // Number of items per page
 
@@ -11,13 +12,19 @@ const Plants = () => {
             .then(res => res.json())
             .then(data => {
                 setTree(data);
+                const filteredPlants = data.filter(i => 
+                    i.category === 'AIR PURIFYING PLANTS' || 
+                    i.category === 'FLOWERING PLANTS' || 
+                    i.category === 'INDOOR PLANTS'
+                );
+                setMinor(filteredPlants);
             });
     }, []);
 
     // Calculate the index of the first and last item on the current page
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = tree.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = minor.slice(indexOfFirstItem, indexOfLastItem);
 
     // Function to handle page change
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -33,7 +40,7 @@ const Plants = () => {
             </div>
             <div className="flex mt-5 justify-center">
                 {/* Pagination Buttons */}
-                {Array.from({ length: Math.ceil(tree.length / itemsPerPage) }, (_, index) => (
+                {Array.from({ length: Math.ceil(minor.length / itemsPerPage) }, (_, index) => (
                     <button
                         key={index + 1}
                         onClick={() => paginate(index + 1)}

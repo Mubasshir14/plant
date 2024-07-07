@@ -82,6 +82,12 @@ const NavBar = () => {
                                 >
                                     Hot Sale
                                 </Link>
+                                <Link
+                                    to="/planters"
+                                    className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"
+                                >
+                                    Planters
+                                </Link>
                                 {user && (
                                     <Link
                                         to="/cart"

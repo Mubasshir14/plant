@@ -12,7 +12,7 @@ const Landscape = () => {
                                     <span className="mb-4 border-b-2 border-black">LandScape </span>
                                     Gardening
                                 </h1>
-                                <p className="mt-8 text-lg text-gray-600 dark:text-gray-400">
+                                <p className="mt-8 text-lg text-gray-600 ">
                                     Whether it is growing your own food or setting up your roof-top garden, we provide the highest quality landscaping services, contributing to a greener world and substantial living!
                                 </p>
                                 <p className='mt-2 mb-6 text-lg text-gray-600 '>Schedule your service appointment today!</p>
