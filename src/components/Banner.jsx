@@ -11,7 +11,7 @@ import banner1 from '../assets/Tree/Banner/HeroBanner.png'
 import banner2 from '../assets/Tree/Banner/HeroBanner1.png'
 const Banner = () => {
     return (
-        <div className=' md:my-10'>
+        <div className='mb-10'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}

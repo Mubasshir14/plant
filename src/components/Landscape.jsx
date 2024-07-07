@@ -14,11 +14,10 @@ const Landscape = () => {
                                 </h1>
                                 <p className="mt-8 text-lg text-gray-600 dark:text-gray-400">
                                     Whether it is growing your own food or setting up your roof-top garden, we provide the highest quality landscaping services, contributing to a greener world and substantial living!
-
-                                    <p className='mt-2 mb-6'>Schedule your service appointment today!</p>
-
-                                    <p className='text-red-600'>**Service only available in Telangana and AndhraPradesh.</p>
                                 </p>
+                                <p className='mt-2 mb-6 text-lg text-gray-600 dark:text-gray-400'>Schedule your service appointment today!</p>
+
+                                    <p className='text-red-600 text-lg text-gray-600 dark:text-gray-400'>**Service only available in Telangana and AndhraPradesh.</p>
                                 <button className="w-full  mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform  rounded-lg lg:w-auto p-5  bg-[#3B823E]">
                                     Book Now
                                 </button>

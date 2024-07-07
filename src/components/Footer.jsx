@@ -10,10 +10,10 @@ const Footer = () => {
                         <div className="w-full -mx-6 lg:w-2/5">
                             <div className="px-6">
                                 <a href="#">
-                                    <img className="w-auto h-7" src={logo} alt="" />
+                                    <img className="w-auto h-7 md:h-20" src={logo} alt="" />
                                 </a>
 
-                                <p className="max-w-sm mt-2 text-white">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
+                                <p className="max-w-sm mt-2 text-white"></p>
 
                                 <div className="flex mt-6 -mx-2 text-white">
                                     <a href="#"
@@ -59,23 +59,24 @@ const Footer = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="text-white uppercase ">Blog</h3>
-                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Tec</a>
-                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Music</a>
-                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Videos</a>
+                                    <h3 className="text-white uppercase ">Legal</h3>
+                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">T&C</a>
+                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Privacy Policy</a>
+                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Returns</a>
+                                
                                 </div>
 
                                 <div>
-                                    <h3 className="text-white uppercase ">Products</h3>
-                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Mega cloud</a>
-                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Aperion UI</a>
-                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Meraki UI</a>
+                                    <h3 className="text-white uppercase ">Support</h3>
+                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">FAQs</a>
+                                    <a href="#" className="block mt-2 text-sm text-whitehover:underline">Contact Us</a>
+                                    
                                 </div>
 
                                 <div>
                                     <h3 className="text-white uppercase ">Contact</h3>
                                     <span className="block mt-2 text-sm text-whitehover:underline">+1 526 654 8965</span>
-                                    <span className="block mt-2 text-sm text-whitehover:underline">example@email.com</span>
+                                    <span className="block mt-2 text-sm text-whitehover:underline">plan@planet.com</span>
                                 </div>
                             </div>
                         </div>
