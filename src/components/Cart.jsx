@@ -1,10 +1,11 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { Link } from "react-router-dom";
-import { BsTrash } from "react-icons/bs"; 
+import { BsTrash } from "react-icons/bs";
+import Swal from "sweetalert2";
+
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
-    // const [loading, setLoading] = useState([]);
     const { user, loading } = useContext(AuthContext);
 
     useEffect(() => {
@@ -25,21 +26,40 @@ const Cart = () => {
 
         fetchCartItems();
     }, [user]);
-    if (loading) return <progress className="progress progress-accent w-56" value="70" max="100"></progress>
+
+    if (loading) {
+        return <progress className="progress progress-accent w-56" value="70" max="100"></progress>;
+    }
 
     const handleDeleteItem = async (itemId) => {
-        try {
-            const response = await fetch(`https://plant-server-6tw1.onrender.com/cart/${itemId}`, {
-                method: 'DELETE',
-            });
-            if (!response.ok) {
-                throw new Error('Failed to delete item');
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    const response = await fetch(`https://plant-server-6tw1.onrender.com/cart/${itemId}`, {
+                        method: 'DELETE',
+                    });
+                    if (!response.ok) {
+                        throw new Error('Failed to delete item');
+                    }
+                    setCartItems(prevItems => prevItems.filter(item => item._id !== itemId));
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your item has been deleted.",
+                        icon: "success"
+                    });
+                } catch (error) {
+                    console.error('Error deleting item:', error);
+                }
             }
-            
-            setCartItems(prevItems => prevItems.filter(item => item._id !== itemId));
-        } catch (error) {
-            console.error('Error deleting item:', error);
-        }
+        });
     };
 
     if (!user) {

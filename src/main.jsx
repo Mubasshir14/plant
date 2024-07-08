@@ -17,6 +17,7 @@ import AuthProvider from './components/AuthProvider';
 import Cart from './components/Cart';
 import TopSelling from './components/TopSelling';
 import Planters from './components/Planters';
+import PrivateRoute from './components/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/cart',
-        element: <Cart />
+        element: <PrivateRoute><Cart /></PrivateRoute>
       },
       {
         path: '/hot',
@@ -65,7 +66,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/planters',
-        element: <Planters/>
+        element: <Planters />
       }
     ]
   },

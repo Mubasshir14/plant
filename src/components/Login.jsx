@@ -6,7 +6,8 @@ import Swal from 'sweetalert2';
 const Login = () => {
     const { signIn, signInWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
-    
+    const from = "/";
+
     const googleSignIn = () => {
         
         signInWithGoogle()
@@ -27,7 +28,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500,
                 });
-                navigate("/");
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 console.log(error.message);
@@ -63,7 +64,7 @@ const Login = () => {
                         `
                     }
                 });
-                navigate('/');
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
